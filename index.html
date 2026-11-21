@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Countdown Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1 id="title">Countdown</h1>
+  <p class="sub">Pick an event and a future date. The timer keeps running.</p>
+
+  <div class="controls">
+    <input type="text" id="name" placeholder="Event name" aria-label="Event name" value="New Year">
+    <input type="datetime-local" id="when" aria-label="Target date and time">
+    <button id="start">Start countdown</button>
+  </div>
+
+  <p class="label" id="label"></p>
+  <div class="grid" role="timer">
+    <div class="unit"><b id="d">00</b><span>days</span></div>
+    <div class="unit"><b id="h">00</b><span>hours</span></div>
+    <div class="unit"><b id="m">00</b><span>minutes</span></div>
+    <div class="unit"><b id="s">00</b><span>seconds</span></div>
+  </div>
+  <div class="msg" id="msg" role="status"></div>
+
+  <section class="theme" aria-label="Colours">
+    <h2>Colours</h2>
+    <label>Background <input type="color" id="c-bg"></label>
+    <label>Cards <input type="color" id="c-card"></label>
+    <label>Buttons &amp; accent <input type="color" id="c-accent"></label>
+    <label>Font <input type="color" id="c-text"></label>
+    <button type="button" id="reset" class="ghost">Reset colours</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
